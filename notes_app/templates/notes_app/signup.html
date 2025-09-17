@@ -1,0 +1,29 @@
+{% extends "notes_app/base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+
+<div class="form-modal">
+  <div class="form-card">
+    <h2 class="form-title">Create Account</h2>
+    <form method="POST" class="form-body">
+      {% csrf_token %}
+      
+      <label for="username" class="form-label">Full Name</label>
+      <input type="text" id="username" name="username" class="form-input" required>
+
+      <label for="email" class="form-label">Email Address</label>
+      <input type="email" id="email" name="email" class="form-input" required>
+
+      <label for="password" class="form-label">Password</label>
+      <input type="password" id="password" name="password" class="form-input" required>
+
+      <button type="submit" class="form-button btn-green">Sign Up</button>
+    </form>
+
+    <p class="form-footer">
+      Already have an account? <a href="{% url 'signin' %}">Login</a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}

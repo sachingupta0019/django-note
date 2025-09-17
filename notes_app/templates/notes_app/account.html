@@ -1,0 +1,22 @@
+{% extends "notes_app/base.html" %}
+{% block title %}My Account{% endblock %}
+{% block content %}
+
+<div class="bg-white shadow-md rounded-lg p-6 max-w-lg mx-auto">
+  <h2 class="text-2xl font-bold mb-4 text-gray-800">Account Details</h2>
+  <div class="space-y-3 text-gray-700">
+    <p><span class="font-semibold">Name:</span> {{ user.user_name }}</p>
+    <p><span class="font-semibold">Email:</span> {{ user.user_email }}</p>
+    <p><span class="font-semibold">User ID:</span> {{ user.user_id }}</p>
+    <p><span class="font-semibold">Last Updated:</span> {{ user.last_update|date:"M d, Y H:i" }}</p>
+  </div>
+
+  <div class="mt-6 flex justify-end">
+    <a href="{% url 'home' %}"
+       class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2">
+      Back to Notes
+    </a>
+  </div>
+</div>
+
+{% endblock %}

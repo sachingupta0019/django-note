@@ -1,0 +1,151 @@
+/* Custom CSS */
+
+
+.form-container {
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  background-color: #fdf6e3;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fce5cd;
+  padding: 0.75rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.form-title {
+  font-weight: 600;
+  color: #1f2937; 
+  align-items: center;
+  /* margin-left: 7rem;
+  margin-right: 7rem;
+  margin-bottom: 2rem; */
+}
+
+
+.form-body {
+  padding: 1rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  border: 1px solid #d1d5db; 
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  outline: none;
+}
+
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.btn-update {
+  background-color: #3b82f6; 
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-update:hover {
+  background-color: #2563eb; 
+}
+
+.btn-cancel {
+  background-color: #ef4444; 
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-save{
+  background-color: green; 
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+
+}
+.btn-cancel:hover {
+  background-color: #dc2626;
+}
+
+
+.form-modal {
+  width: 100%;
+  max-width: 28rem; /* same as max-w-lg */
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  background-color: #fdf6e3;
+}
+
+
+.form-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+/* Blue button */
+.btn-blue {
+  background-color: #3b82f6; /* blue-500 */
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #2563eb; /* blue-600 */
+}
+
+/* Footer */
+.form-footer {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #4b5563; /* gray-700 */
+}
+
+
+.btn-green {
+  background-color: #22c55e; /* green-500 */
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: #16a34a; /* green-600 */
+}
+
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.message.success {
+  background: #d1fae5; /* green-100 */
+  color: #065f46;     /* green-800 */
+}
+
+.message.error {
+  background: #fee2e2; /* red-100 */
+  color: #991b1b;     /* red-800 */
+}

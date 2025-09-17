@@ -1,0 +1,29 @@
+{% extends "notes_app/base.html" %}
+{% block title %}Edit Note{% endblock %}
+
+{% block content %}
+
+<div class="form-modal">
+ 
+  <div class="form-header">
+    <h3 class="form-title">Edit Note</h3>
+  </div>
+
+  <form method="POST" class="form-body">
+    {% csrf_token %}
+    
+    <input type="text" name="title" placeholder="Note Title"
+           value="{{ note.note_title }}"
+           class="form-input" required>
+           
+    <textarea name="content" rows="5" placeholder="Write your note..."
+              class="form-textarea" required>{{ note.note_content }}</textarea>
+   
+    <div class="form-actions">
+      <button type="submit" class="btn-update">Update</button>
+      <a href="{% url 'home' %}" class="btn-cancel">Cancel</a>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

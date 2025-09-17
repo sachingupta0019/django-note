@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}Keep Notes{% endblock %}
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{% static 'notes_app/css/style.css' %}">
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+
+  <header class="bg-blue-200 p-4 flex justify-between items-center">
+    <h1 class="text-lg font-bold">Keep Notes</h1>
+    <nav class="space-x-4">
+      <a href="{% url 'home' %}" class="hover:underline">Notes</a>
+      {% if current_user.is_authenticated %}
+        <a href="{% url 'account' %}" class="hover:underline">Account</a>
+        <a href="{% url 'signout' %}" class="hover:underline">Logout</a>
+      {% else %}
+        <a href="{% url 'signin' %}" class="hover:underline">Sign In</a>
+        <a href="{% url 'signup' %}" class="hover:underline">Sign Up</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  {% if messages %}
+    <div class="messages">
+      {% for message in messages %}
+        <div class="alert {{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <main class="max-w-4xl mx-auto p-6">
+    {% block content %} {% endblock %}
+  </main>
+</body>
+</html>
